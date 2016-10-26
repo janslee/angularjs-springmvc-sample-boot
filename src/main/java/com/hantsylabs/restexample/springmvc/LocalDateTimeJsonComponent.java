@@ -40,7 +40,7 @@ public class LocalDateTimeJsonComponent {
             ObjectCodec codec = p.getCodec();
             JsonNode tree = codec.readTree(p);
             String dateTimeAsString = tree.textValue();
-            //log.debug("dateTimeString value @" + dateTimeAsString);
+            log.debug("dateTimeString value @" + dateTimeAsString);
             return LocalDateTime.ofInstant(Instant.parse(dateTimeAsString), ZoneId.systemDefault());
         }
 
